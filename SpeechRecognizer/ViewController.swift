@@ -27,7 +27,6 @@ class ViewController: UIViewController {
                 let asset =  self?.makeComposition(url: videoUrl!, muteRanges: timeRanges)
                 self?.setupAVplayer(asset: asset!)
             }
-
         }
     }
 
@@ -44,67 +43,12 @@ class ViewController: UIViewController {
         player.volume = 1
     }
     
-    
-    func textUsingBuffers(audioURL: URL) {
-        
-        let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
-        let request = SFSpeechAudioBufferRecognitionRequest()
-        
-        // ------ 1
-        /*
-        let allBuffers = getAllAudioBuffers(url: audioURL)
-//        print("allBuffers are :\(allBuffers)")
-        print("allBuffers count are :\(allBuffers?.count)")
-        allBuffers?.forEach({ buffer in
-            request.appendAudioSampleBuffer(buffer)
-        })
-        */
-        
-        // ------ 2
-        guard let file = try? AVAudioFile(forReading: audioURL) else { return }
-
-        let audioBuffer = AVAudioPCMBuffer.init(pcmFormat: file.processingFormat,
-                  frameCapacity: AVAudioFrameCount(file.length))
-        request.append(audioBuffer!)
-
-
-//        var task: SFSpeechRecognitionTask?
-        request.shouldReportPartialResults = true
-
-        if (recognizer?.isAvailable)! {
-            
-            recognizer?.recognitionTask(with: request) { result, error in
-                
-//                print("speakingRate segments", result?.bestTranscription.speakingRate)
-//                print("time stamp segments", result?.bestTranscription.segments.count)
-//                print("time stamp", result?.bestTranscription.segments.last?.timestamp)
-                guard error == nil else { print("Error: \(error!)"); return }
-                guard let result = result else { print("No result!"); return }
-//                print(result.bestTranscription.formattedString)
-                print(result.transcriptions.last?.formattedString)
-                
-                
-                if result.isFinal {
-                    print("Final:",result.bestTranscription.formattedString)
-                }
-            }
-        } else {
-            print("Device doesn't support speech recognition")
-        }
-        
-        
-    }
-    
-    
     func textUsingSimpleUrl(audioURL: URL, completion: @escaping ([CMTimeRange]?) -> Void) {
         
         let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
         let request = SFSpeechURLRecognitionRequest(url: audioURL)
         
-//        let request = SFSpeechURLRecognitionRequest
-
-//        let trans = SFTranscription()
-        request.shouldReportPartialResults = false
+        request.shouldReportPartialResults = true
         
         var muteTimeRange = [CMTimeRange]()
         
@@ -174,84 +118,6 @@ class ViewController: UIViewController {
         return mainComposition
     }
     
-    
-    func testing() {
-        
-//        SFSpeechRecognitionMetadata
-//
-//        SFTranscription
-//
-//        SFTranscriptionSegment
-//        SFSpeechRecognitionRequest
-//        AVSpeechUtterance
-        
-    }
-    
-    
-    func getAllAudioBuffers(url: URL) -> [CMSampleBuffer]? {
-        
-        let asset = AVAsset(url: url)
-        
-        var reader: AVAssetReader? = nil
-        do {
-            reader = try AVAssetReader(asset: asset)
-        } catch {
-            return nil
-        }
-        
-        guard let audioTrack = asset.tracks(withMediaType: .audio).first else {
-            return nil
-        }
-        
-        var audioReadSettings: [AnyHashable : Any] = [:]
-        audioReadSettings[AVFormatIDKey] = NSNumber(value: Int32(kAudioFormatLinearPCM))
-        
-        let readerOutput = AVAssetReaderTrackOutput(track: audioTrack, outputSettings: audioReadSettings as? [String : Any])
-        reader!.add(readerOutput)
-        reader!.startReading()
-        
-        var sample = readerOutput.copyNextSampleBuffer()
-        var samples: [CMSampleBuffer] = []
-
-        while sample != nil {
-            sample = readerOutput.copyNextSampleBuffer()
-            if sample == nil {
-                continue
-            }
-            samples.append(sample!)
-        }
-        
-        return samples
-    }
-    
-}
-
-extension ViewController: SFSpeechRecognizerDelegate, SFSpeechRecognitionTaskDelegate {
-    
-    func speechRecognitionDidDetectSpeech(_ task: SFSpeechRecognitionTask) {
-        
-    }
-
-    func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didHypothesizeTranscription transcription: SFTranscription) {
-        
-    }
-
-    func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didFinishRecognition recognitionResult: SFSpeechRecognitionResult) {
-        
-    }
-
-    func speechRecognitionTaskFinishedReadingAudio(_ task: SFSpeechRecognitionTask) {
-        
-    }
-
-    func speechRecognitionTaskWasCancelled(_ task: SFSpeechRecognitionTask) {
-        
-    }
-
-    func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didFinishSuccessfully successfully: Bool) {
-        
-    }
-
 }
 
 extension CMTime {
