@@ -13,8 +13,9 @@
 		A7C851DC2925E31E00D0321D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C851DA2925E31E00D0321D /* Main.storyboard */; };
 		A7C851DE2925E31F00D0321D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7C851DD2925E31F00D0321D /* Assets.xcassets */; };
 		A7C851E12925E31F00D0321D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C851DF2925E31F00D0321D /* LaunchScreen.storyboard */; };
-		A7C851ED2927385500D0321D /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = A7C851EC2927385500D0321D /* video.MOV */; };
 		A7C851EF2927393700D0321D /* mute.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A7C851EE2927393700D0321D /* mute.m4r */; };
+		A7C851F12927460E00D0321D /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = A7C851F02927460D00D0321D /* video.mov */; };
+		A7C851F3292746CE00D0321D /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C851F2292746CE00D0321D /* Exporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		A7C851DD2925E31F00D0321D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7C851E02925E31F00D0321D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7C851E22925E31F00D0321D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7C851EC2927385500D0321D /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
 		A7C851EE2927393700D0321D /* mute.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = mute.m4r; sourceTree = "<group>"; };
+		A7C851F02927460D00D0321D /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		A7C851F2292746CE00D0321D /* Exporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				A7C851EE2927393700D0321D /* mute.m4r */,
-				A7C851EC2927385500D0321D /* video.MOV */,
+				A7C851F02927460D00D0321D /* video.mov */,
+				A7C851F2292746CE00D0321D /* Exporter.swift */,
 				A7C851D42925E31E00D0321D /* AppDelegate.swift */,
 				A7C851D62925E31E00D0321D /* SceneDelegate.swift */,
 				A7C851D82925E31E00D0321D /* ViewController.swift */,
@@ -131,10 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C851F12927460E00D0321D /* video.mov in Resources */,
 				A7C851E12925E31F00D0321D /* LaunchScreen.storyboard in Resources */,
 				A7C851DE2925E31F00D0321D /* Assets.xcassets in Resources */,
 				A7C851EF2927393700D0321D /* mute.m4r in Resources */,
-				A7C851ED2927385500D0321D /* video.MOV in Resources */,
 				A7C851DC2925E31E00D0321D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7C851D92925E31E00D0321D /* ViewController.swift in Sources */,
+				A7C851F3292746CE00D0321D /* Exporter.swift in Sources */,
 				A7C851D52925E31E00D0321D /* AppDelegate.swift in Sources */,
 				A7C851D72925E31E00D0321D /* SceneDelegate.swift in Sources */,
 			);

@@ -7,33 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "355C163B-48DD-4F2E-921B-8425A1874378"
+            uuid = "C84C1ED5-80AD-4397-8A29-E413035841E1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpeechRecognizer/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "makeComposition(url:muteRanges:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "speachRecognizer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "936AA0C3-FD49-42AB-B5C4-41C5584451E6"
+            uuid = "7E74AA1E-98AC-4F1B-B0E1-2510110EC02B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpeechRecognizer/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "makeComposition(url:muteRanges:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "speachRecognizer()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E74AA1E-98AC-4F1B-B0E1-2510110EC02B - 10d604a26cf4854e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CMTimeRange&gt;&gt;) -&gt; () in SpeechRecognizer.ViewController.speachRecognizer() -&gt; ()"
+                  moduleName = "SpeechRecognizer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/iOS%20R&amp;D%20/CensorBot/SpeechRecognizer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "7E74AA1E-98AC-4F1B-B0E1-2510110EC02B - c25a3cf9d9acd879"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.CMTimeRange&gt;&gt;) -&gt; () in SpeechRecognizer.ViewController.speachRecognizer() -&gt; ()"
+                  moduleName = "SpeechRecognizer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/iOS%20R&amp;D%20/CensorBot/SpeechRecognizer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

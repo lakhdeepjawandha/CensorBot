@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>You can remove the sensor words from your audio or video files.</string>
 </dict>
 </plist>

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     func speachRecognizer() {
-        let videoUrl = Bundle.main.url(forResource: "video", withExtension: "MOV")
+        let videoUrl = Bundle.main.url(forResource: "video", withExtension: "mov")
 
         textUsingSimpleUrl(audioURL: videoUrl!) { [weak self] timeRanges in
             guard let timeRanges = timeRanges else { return }
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 let asset =  self?.makeComposition(url: videoUrl!, muteRanges: timeRanges)
                 self?.setupAVplayer(asset: asset!)
+//                self?.exportFinalVideo(asset: asset!)
             }
         }
     }
@@ -41,6 +42,14 @@ class ViewController: UIViewController {
         player.seek(to: .zero)
         player.play()
         player.volume = 1
+    }
+    
+    func exportFinalVideo(asset: AVAsset) {
+        Exporter().exportingVideo(asset: asset, videoName: "video") { progress in
+            print("export progress:\(progress)")
+        } completionBlock: { export in
+            print("👉final Export Video Url: \(String(describing: export?.outputURL))")
+        }
     }
     
     func textUsingSimpleUrl(audioURL: URL, completion: @escaping ([CMTimeRange]?) -> Void) {
@@ -98,7 +107,7 @@ class ViewController: UIViewController {
         let videoCompositionTrack = mainComposition.addMutableTrack(
                 withMediaType: AVMediaType.video, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
         
-        var audioCompositionTrack = mainComposition.addMutableTrack(withMediaType: AVMediaType.audio,
+        let audioCompositionTrack = mainComposition.addMutableTrack(withMediaType: AVMediaType.audio,
                 preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
 
         try? videoCompositionTrack?.insertTimeRange(CMTimeRange(start: .zero, duration: asset.duration), of: videoTrack, at: .zero)
