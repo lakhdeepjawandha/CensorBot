@@ -13,8 +13,6 @@
 		A7C851DC2925E31E00D0321D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C851DA2925E31E00D0321D /* Main.storyboard */; };
 		A7C851DE2925E31F00D0321D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7C851DD2925E31F00D0321D /* Assets.xcassets */; };
 		A7C851E12925E31F00D0321D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C851DF2925E31F00D0321D /* LaunchScreen.storyboard */; };
-		A7C851E92925E44800D0321D /* video1.MOV in Resources */ = {isa = PBXBuildFile; fileRef = A7C851E82925E44800D0321D /* video1.MOV */; };
-		A7C851EB292737AF00D0321D /* video2.MOV in Resources */ = {isa = PBXBuildFile; fileRef = A7C851EA292737AF00D0321D /* video2.MOV */; };
 		A7C851ED2927385500D0321D /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = A7C851EC2927385500D0321D /* video.MOV */; };
 		A7C851EF2927393700D0321D /* mute.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A7C851EE2927393700D0321D /* mute.m4r */; };
 /* End PBXBuildFile section */
@@ -28,8 +26,6 @@
 		A7C851DD2925E31F00D0321D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7C851E02925E31F00D0321D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7C851E22925E31F00D0321D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7C851E82925E44800D0321D /* video1.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video1.MOV; sourceTree = "<group>"; };
-		A7C851EA292737AF00D0321D /* video2.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video2.MOV; sourceTree = "<group>"; };
 		A7C851EC2927385500D0321D /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
 		A7C851EE2927393700D0321D /* mute.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = mute.m4r; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,9 +60,7 @@
 		A7C851D32925E31E00D0321D /* SpeechRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				A7C851E82925E44800D0321D /* video1.MOV */,
 				A7C851EE2927393700D0321D /* mute.m4r */,
-				A7C851EA292737AF00D0321D /* video2.MOV */,
 				A7C851EC2927385500D0321D /* video.MOV */,
 				A7C851D42925E31E00D0321D /* AppDelegate.swift */,
 				A7C851D62925E31E00D0321D /* SceneDelegate.swift */,
@@ -137,9 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C851E92925E44800D0321D /* video1.MOV in Resources */,
 				A7C851E12925E31F00D0321D /* LaunchScreen.storyboard in Resources */,
-				A7C851EB292737AF00D0321D /* video2.MOV in Resources */,
 				A7C851DE2925E31F00D0321D /* Assets.xcassets in Resources */,
 				A7C851EF2927393700D0321D /* mute.m4r in Resources */,
 				A7C851ED2927385500D0321D /* video.MOV in Resources */,
